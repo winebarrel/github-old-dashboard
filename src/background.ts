@@ -6,7 +6,7 @@ export async function replaceFeed() {
   }
 
   const feedHtml = await fetch("https://github.com/dashboard-feed").then(
-    (res) => res.text()
+    (res) => res.text(),
   );
 
   const parser = new DOMParser();
