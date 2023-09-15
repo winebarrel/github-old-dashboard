@@ -18,6 +18,7 @@ export async function replaceFeed() {
   cssForOldFeed.textContent = `
     .feed-content {
       max-width: none;
+      justify-content: space-evenly !important;
     }
 
     @media (min-width: 768px) {
@@ -29,6 +30,9 @@ export async function replaceFeed() {
     @media (min-width: 1400px) {
       .feed-main {
         max-width: calc(100% - 24px - 356px);
+      }
+      .feed-right-sidebar {
+        min-width: 315px;
       }
     }
   `;
