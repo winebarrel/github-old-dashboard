@@ -1,6 +1,7 @@
 {
   "type": "module",
   "private": true,
+  "version": "0.1.0",
   "scripts": {
     "build": "npm run clean && tsc && vite build",
     "zip": "npm run build && cd dist && zip -r ../github-old-dashboard.zip .",
