@@ -13,6 +13,30 @@ export async function replaceFeed() {
   const feed = parser.parseFromString(feedHtml, "text/html");
   const feedMain = feed.querySelector("div.application-main main")!;
   dashboard.innerHTML = feedMain.innerHTML;
+
+  const cssForOldFeed = document.createElement('style');
+  cssForOldFeed.textContent = `
+    .feed-content {
+      max-width: none;
+      justify-content: space-evenly !important;
+    }
+
+    @media (min-width: 768px) {
+      .feed-main {
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .feed-main {
+        max-width: calc(100% - 24px - 356px);
+      }
+      .feed-right-sidebar {
+        min-width: 315px;
+      }
+    }
+  `;
+  document.head.appendChild(cssForOldFeed);
 }
 
 chrome.tabs.onUpdated.addListener(async (tabId, props, tab) => {
