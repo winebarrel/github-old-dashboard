@@ -23,7 +23,7 @@
     "@types/chrome": "^0.0.268",
     "npm-watch": "^0.13.0",
     "prettier": "^3.3.2",
-    "typescript": "^5.4.5",
+    "typescript": "^5.5.2",
     "vite": "^5.3.1"
   }
 }
