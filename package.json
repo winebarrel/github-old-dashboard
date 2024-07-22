@@ -24,6 +24,6 @@
     "npm-watch": "^0.13.0",
     "prettier": "^3.3.3",
     "typescript": "^5.5.3",
-    "vite": "^5.3.3"
+    "vite": "^5.3.4"
   }
 }
